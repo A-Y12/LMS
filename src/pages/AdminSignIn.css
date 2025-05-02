@@ -1,0 +1,161 @@
+.admin-dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #2f3542;
+  color: #fff;
+  padding: 30px 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 14px 18px;
+  margin: 10px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #dcdde1;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.sidebar ul li:hover {
+  background-color: #57606f;
+  transform: translateX(3px);
+}
+
+.sidebar ul li.active {
+  background-color: #ffa502;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: #ffffff;
+  overflow-y: auto;
+  animation: fadeSlideUp 0.4s ease;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.books-section,
+.users-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.book-form-box,
+.user-form-box,
+.book-list-box,
+.user-list-box {
+  background-color: #fdfdfd;
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease;
+}
+
+.book-form-box:hover,
+.user-form-box:hover,
+.book-list-box:hover,
+.user-list-box:hover {
+  transform: translateY(-4px);
+}
+
+/* List Items */
+ul li {
+  padding: 12px 16px;
+  margin: 12px 0;
+  background-color: #f1f2f6;
+  color: #2f3542;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #dcdde1;
+}
+
+/* Buttons */
+button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-button {
+  background-color: #ffa502;
+  color: #fff;
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+.delete-button {
+  background-color: #ff4757;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #e84118;
+  transform: scale(1.05);
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.pagination button {
+  background-color: #f1f2f6;
+  color: #2f3542;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #dcdde1;
+}

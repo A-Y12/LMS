@@ -1,0 +1,117 @@
+/* Container for the entire page */
+.choose-role-container {
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Parallax background effect */
+.parallax-background {
+  background-image: url('/src/images/bp.webp');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Dark transparent overlay */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker for better text contrast */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Centered content inside overlay */
+.content {
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  max-width: 600px;
+}
+
+/* Headline styling */
+.headline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Subtext styling */
+.subtext {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Common button styles */
+.role-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.25rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Admin button */
+.admin-button {
+  background-color: #ff6f61;
+}
+
+.admin-button:hover {
+  background-color: #e65c50;
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* User button */
+.user-button {
+  background-color: #4caf50;
+}
+
+.user-button:hover {
+  background-color: #43a047;
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .headline {
+    font-size: 2.5rem;
+  }
+
+  .subtext {
+    font-size: 1.25rem;
+  }
+
+  .role-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
